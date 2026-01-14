@@ -27,3 +27,10 @@ function displayList() {
     }
 }
 
+function handleAddItem() {
+
+}
+
+function handleRemoveItem() {
+    
+}
