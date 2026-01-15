@@ -28,7 +28,15 @@ function displayList() {
 }
 
 function handleAddItem() {
+    const input = document.getElementById('itemInput');
+    const newItem = input.value;
+    console.log("newItem : ", newItem);
 
+    if (newItem !== "") {
+        addItem(newItem);
+        input.value = ""; 
+        displayList();     
+    }
 }
 
 function handleRemoveItem() {
