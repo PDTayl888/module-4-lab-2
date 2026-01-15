@@ -24,9 +24,9 @@ function removeLastItem() {
 }
 
 function displayList() {
-     const listElement = document.getElementById('shoppingList');
+    const listElement = document.getElementById('shoppingList');
 
-     listElement.innerHTML = '';
+    listElement.innerHTML = '';
 
     for (let i=0; i < shoppingList.length; i++) {
        const li = document.createElement('li');
@@ -48,6 +48,7 @@ function handleAddItem() {
     }
 }
 
-function handleRemoveItem() {
-    
+function handleRemoveLastItem() {
+    removeLastItem();
+    displayList();
 }
