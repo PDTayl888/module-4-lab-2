@@ -1,0 +1,17 @@
+body {
+    background-color: #C0C0C0;
+}
+
+.button {
+    border-radius: 15px;
+    border-width: 4px;
+    background-color: #B0C4DE;
+}
+
+.input  {
+    border-radius: 6px;
+}
+
+.list {
+    list-style-type: circle;
+}

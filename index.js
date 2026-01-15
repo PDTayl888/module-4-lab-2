@@ -11,21 +11,22 @@ function addItem(item) {
 }
 
 function filterItems(term) {
+    let lowerCaseTerm = term.toLowerCase();
+    console.log("lowerCaseTerm : ", lowerCaseTerm);
     console.log("term : ", term);
     searchList = [];
     for (let i=0; i < shoppingList.length; i++) {
         console.log("i : ", i);
         console.log("typeof : ", typeof shoppingList[i]);
-        if (typeof shoppingList[i] === "string" && shoppingList[i].toLowerCase().includes(term.toLowerCase())) {
+        if (typeof shoppingList[i] === "string" && shoppingList[i].toLowerCase().includes(lowerCaseTerm)) {
             console.log("conditions met : ", i);
             console.log("shoppingList[i] : ", shoppingList[i]);
             searchList.push(shoppingList[i]);
-
-             return searchList;
         }
-        console.log("searchList : ", searchList);
-       
+            console.log("searchList : ", searchList);
+             
     }
+     return searchList; 
     
 }
 
