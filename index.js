@@ -11,12 +11,22 @@ function addItem(item) {
 }
 
 function filterItems(term) {
+    console.log("term : ", term);
+    searchList = [];
     for (let i=0; i < shoppingList.length; i++) {
-        if (typeof shoppingList[i] === "String" && shoppingList[i].toLowercase().includes(term.toLowercase())) {
+        console.log("i : ", i);
+        console.log("typeof : ", typeof shoppingList[i]);
+        if (typeof shoppingList[i] === "string" && shoppingList[i].toLowerCase().includes(term.toLowerCase())) {
+            console.log("conditions met : ", i);
+            console.log("shoppingList[i] : ", shoppingList[i]);
             searchList.push(shoppingList[i]);
+
+             return searchList;
         }
+        console.log("searchList : ", searchList);
+       
     }
-    console.log(searchList.join(' '));
+    
 }
 
 function removeLastItem() {
