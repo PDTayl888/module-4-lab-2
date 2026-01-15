@@ -26,6 +26,8 @@ function removeLastItem() {
 function displayList() {
      const listElement = document.getElementById('shoppingList');
 
+     listElement.innerHTML = '';
+
     for (let i=0; i < shoppingList.length; i++) {
        const li = document.createElement('li');
         li.textContent = shoppingList[i];
