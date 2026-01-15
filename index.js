@@ -3,8 +3,10 @@ let searchList = [];
 
 function addItem(item) {
     console.log("ADD ITEM CALLED");
+    console.log("item : ", item);
+
     if (!shoppingList.includes(item)) {
-        shoppingList.push[item];
+        shoppingList.push(item);
     }
 }
 
@@ -22,7 +24,12 @@ function removeLastItem() {
 }
 
 function displayList() {
+     const listElement = document.getElementById('shoppingList');
+
     for (let i=0; i < shoppingList.length; i++) {
+       const li = document.createElement('li');
+        li.textContent = shoppingList[i];
+        listElement.appendChild(li);
         console.log(shoppingList[i]);
     }
 }
